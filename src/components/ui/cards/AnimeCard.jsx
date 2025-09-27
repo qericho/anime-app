@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const sampleIMG =
   "https://i.pinimg.com/474x/fa/d5/e7/fad5e79954583ad50ccb3f16ee64f66d.jpg";
 
@@ -36,9 +38,12 @@ const AnimeCard = ({ anime, id }) => {
 
         {/* Buttons */}
         <div className="flex items-center gap-2 mt-3">
-          <button className="cursor-pointer px-3 py-1 text-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md transition-colors">
+          <Link
+            to={`/anime/${anime.mal_id}`}
+            className="cursor-pointer px-3 py-1 text-sm bg-blue-500 text-white hover:bg-blue-600 rounded-md transition-colors"
+          >
             Watch
-          </button>
+          </Link>
         </div>
       </div>
     </div>

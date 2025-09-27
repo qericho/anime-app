@@ -19,7 +19,7 @@ const MoviePage = () => {
     <div className="max-w-7xl h-full mx-auto">
       <h1 className="text-2xl font-semibold my-8 px-2">All Movies</h1>
       {/* Anime Movie Grid */}
-      <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-2 py-5 cursor-pointer ">
+      <div className="w-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 px-2 py-5">
         {data?.data?.map((anime) => (
           <AnimeCard key={anime.mal_id} anime={anime} />
         ))}

@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
+import Fade from "../components/ui/spinner/Fade";
 
 function DetailsPage() {
   const { id } = useParams();
@@ -17,13 +18,7 @@ function DetailsPage() {
 
   const [showTrailer, setShowTrailer] = useState(false);
 
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen text-xl">
-        Loading...
-      </div>
-    );
-  }
+  if (loading) return <Fade />;
 
   if (error) {
     return (
